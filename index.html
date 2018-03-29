@@ -2,9 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body background="">
+    <title>想给兔子牙白的一封情书</title>
+    <style>
+        body {
+            background: url("img/2.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
+        #a {
+            font-size: 25px;
+            font-family: Algerian;
+            padding-left: 50px;
+
+        }
+        .say{
+            font-size: 150%;
+            font-family:Monospace;
+            padding-left: 50px;
+        }
+
+        .b {
+            font-size: 130%;
+            padding-left: 20%;
+
+        }
+        #c{
+
+        }
+    </style>
+</head>
+<body bgcolor="#f0f8ff" onclick="chgbg()">
+<div id="c">
+<p>
+    <span class="say"> </span><br>
+    <span  id="a">For</span><span class="say"> 兔子牙白 </span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 在下定了决心以后</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 在一切都太晚之前</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 我终于……想对你说</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 喜欢你，思你时喜，念你时欢</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 希望能和你彼此依赖，彼此关心，彼此温暖</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> 和你在一起真实的感受生命，和你生活在一起，和你</span><br>
+    <span class="say"> </span><br>
+    <span class="say"> ..永远的..</span><br></p>
+<div class="b"> <strong><script type="text/javascript">
+    //设置起始时间
+    var together = new Date();
+    together.setFullYear(2012,8,1); //时间年月日     注意这个9代表的是10月
+    together.setHours(18);//小时
+    together.setMinutes(00);//分钟
+    together.setSeconds(0); //秒前一位
+    together.setMilliseconds(0);//秒第二位
+    //使用定时器调用这个函数 就可实现
+        timeElapse(together);
+    function timeElapse(date){
+        var current = new Date();
+        var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+        var days = Math.floor(seconds / (3600 * 24));
+        seconds = seconds % (3600 * 24);
+        var hours = Math.floor(seconds / 3600);
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+        seconds = seconds % 3600;
+        var minutes = Math.floor(seconds / 60);
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        seconds = seconds % 60;
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        var result = "兔子牙白 与 梅子酒 已经相识了 : &nbsp;<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒";
+        document.write(result)
+    }</script></strong></div>
+    <p class="b"><strong> 喜欢你，超过了两分钟，再也撤不回了</strong></p></div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#c").click(function () {
+            $(this).hide(3000);
+        });
+    });
+</script>
+
+<script>function chgbg() {
+    document.body.style.background="url('img/3.png')";
+    document.body.style.backgroundSize="100%";
+    document.body.style.backgroundRepeat="no-repeat"
+}</script>
 </body>
 </html>
