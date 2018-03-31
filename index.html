@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>想给兔子牙白的一封情书</title>
+    <script type="text/javascript" src="jquery.js"></script>
     <style>
         body {
             background: url("img/2.png");
@@ -28,11 +29,11 @@
 
         }
         #c{
-
+           display: none;
         }
     </style>
 </head>
-<body bgcolor="#f0f8ff" onclick="chgbg()">
+<body bgcolor="#f0f8ff">   <!--onclick="chgbg()"-->
 <div id="c">
 <p>
     <span class="say"> </span><br>
@@ -51,7 +52,7 @@
     <span class="say"> 和你在一起真实的感受生命，和你生活在一起，和你</span><br>
     <span class="say"> </span><br>
     <span class="say"> ..永远的..</span><br></p>
-<div class="b"> <strong><script type="text/javascript">
+    <p><div class="b"> <strong><script type="text/javascript">
     //设置起始时间
     var together = new Date();
     together.setFullYear(2012,8,1); //时间年月日     注意这个9代表的是10月
@@ -81,23 +82,22 @@
         }
         var result = "兔子牙白 与 梅子酒 已经相识了 : &nbsp;<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒";
         document.write(result)
-    }</script></strong></div>
+    }</script></strong></p></div>
     <p class="b"><strong> 喜欢你，超过了两分钟，再也撤不回了</strong></p></div>
 
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#c").click(function () {
-            $(this).hide(3000);
+    $(document).ready(function(){
+        $("body").click(function(){
+            $("p").fadeIn(1000);
         });
     });
 </script>
 
-<script>function chgbg() {
-    document.body.style.background="url('img/3.png')";
-    document.body.style.backgroundSize="100%";
-    document.body.style.backgroundRepeat="no-repeat"
-}</script>
+<!--<script>function chgbg() {-->
+    <!--document.body.style.background="url('img/3.png')";-->
+    <!--document.body.style.backgroundSize="100%";-->
+    <!--document.body.style.backgroundRepeat="no-repeat"-->
+<!--}</script>-->
 </body>
 </html>
